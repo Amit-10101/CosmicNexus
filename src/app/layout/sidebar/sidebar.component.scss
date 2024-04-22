@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+@import "../../../styles/functions";
+
+.sidebar {
+	width: 5rem;
+}
+
+.icons {
+	padding: 5px 10px;
+	border-radius: 10px;
+	font-size: 1.25rem;
+	&:hover {
+		@include transition(all, 0.25s, ease-in-out);
+		background: lighten($color: $light-tertiary, $amount: 7);
+	}
+}
+
+.active {
+	@include transition(all, 0.25s, ease-in-out);
+	background-color: rgba($primary, 0.5);
+	color: white;
+	&:hover {
+		@include transition(all, 0.25s, ease-in-out);
+		background-color: rgba($primary, 0.75);
+	}
+}

@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../src/styles/variables";
+@import "../src/styles/functions";
+
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"tertiary": $tertiary,
+	"light-primary": $light-primary,
+	"light-tertiary": $light-tertiary,
+	"font-color": $font-color,
+	"success": $success,
+	"danger": $danger,
+	"warning": $warning,
+	"info": $info,
+	"light": $light,
+	"dark": $dark,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	width: 100%;
+	color: $font-color;
+}
+
+::-webkit-scrollbar {
+	@include transition(all, 0.2s, ease-in-out);
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	@include transition(all, 0.2s, ease-in-out);
+	background-color: rgba($color: $primary, $alpha: 0.4);
+	border-radius: 10px;
+
+	&:hover,
+	&:active {
+		@include transition(all, 0.2s, ease-in-out);
+		background-color: rgba($color: $primary, $alpha: 0.7);
+	}
+}
+
+::-webkit-scrollbar-track {
+	@include transition(all, 0.2s, ease-in-out);
+	background-color: $light-tertiary;
+	border-radius: 10px;
+}
