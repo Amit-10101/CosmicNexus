@@ -1,0 +1,91 @@
+<div class="popular w-100 d-flex gap-5 mt-5">
+	<!--- Popular First Column --->
+	<div class="popular-first-col col-4 text-primary flex-shrink-1">
+		<h2 class="mb-3 ms-2">Top Seller</h2>
+		<div class="bg-tertiary rounded-4 w-100 d-flex flex-column">
+			<div
+				*ngFor="
+					let game of popularSectionData.topSeller;
+					let last = last
+				"
+			>
+				<div class="popular-game">
+					<!-- <div class="rank col-1">1</div> -->
+					<img
+						src="assets/avatar/{{ game.image }}"
+						alt="{{ game.name }} Avatar"
+						class="popular-game-image col-3"
+					/>
+					<div
+						class="d-flex flex-column justify-content-center gap-3"
+					>
+						<h5 class="m-0">{{ game.name }}</h5>
+						<small>
+							<i class="bi bi-currency-rupee"></i>
+							{{ game.price }}
+						</small>
+					</div>
+				</div>
+				<hr *ngIf="!last" />
+			</div>
+		</div>
+	</div>
+
+	<!--- Popular Second Column --->
+	<div class="popular-second-col col-4 text-primary flex-shrink-1">
+		<h2 class="mb-3 ms-2">Most Played</h2>
+		<div class="bg-tertiary rounded-4 w-100 d-flex flex-column">
+			<div
+				*ngFor="
+					let game of popularSectionData.mostPlayed;
+					let last = last
+				"
+			>
+				<div class="popular-game">
+					<img
+						src="assets/avatar/{{ game.image }}"
+						alt="popular-game"
+						class="popular-game-image col-3"
+					/>
+					<div class="d-flex flex-column gap-3">
+						<h5 class="m-0">{{ game.name }}</h5>
+						<small
+							>{{ game.downloads }}
+							<i class="bi bi-download ms-1"></i
+						></small>
+					</div>
+				</div>
+				<hr *ngIf="!last" />
+			</div>
+		</div>
+	</div>
+
+	<!--- Popular Third Column --->
+	<div class="popular-third-col col-4 text-primary flex-shrink-1">
+		<h2 class="mb-3 ms-2">Top Players</h2>
+		<div class="bg-tertiary rounded-4 w-100 d-flex flex-column">
+			<div
+				*ngFor="
+					let player of popularSectionData.topPlayers;
+					let last = last
+				"
+			>
+				<div class="popular-game">
+					<!-- <div class="rank col-1">1</div> -->
+					<img
+						src="assets/users/{{ player.avatar }}"
+						alt="{{ player.name }} Avatar"
+						class="popular-game-image col-3"
+					/>
+					<div class="d-flex flex-column">
+						<h4>{{ player.name }}</h4>
+						<small
+							>{{ player.score }} <i class="bi bi-award-fill"></i
+						></small>
+					</div>
+				</div>
+				<hr *ngIf="!last" />
+			</div>
+		</div>
+	</div>
+</div>

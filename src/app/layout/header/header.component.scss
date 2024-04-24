@@ -28,11 +28,12 @@ form {
 	padding: 5px 10px;
 	border-radius: 10px;
 	font-size: 1.25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 	&:hover {
 		@include transition(all, 0.25s, ease-in-out);
 		background: lighten($color: $light-tertiary, $amount: 7);
 	}
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }

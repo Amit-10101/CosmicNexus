@@ -9,16 +9,23 @@
 	padding: 5px 10px;
 	border-radius: 10px;
 	font-size: 1.25rem;
+	text-decoration: none;
+	cursor: pointer;
+	color: $font-color;
 	&:hover {
 		@include transition(all, 0.25s, ease-in-out);
 		background: lighten($color: $light-tertiary, $amount: 7);
+	}
+	&:active,
+	&:visited {
+		color: $font-color;
 	}
 }
 
 .active {
 	@include transition(all, 0.25s, ease-in-out);
 	background-color: rgba($primary, 0.5);
-	color: white;
+	color: white !important;
 	&:hover {
 		@include transition(all, 0.25s, ease-in-out);
 		background-color: rgba($primary, 0.75);

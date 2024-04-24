@@ -1,6 +1,9 @@
 @import "../src/styles/variables";
 @import "../src/styles/functions";
 
+// Green: #26e350
+// Dark Green: #3a8f12
+
 $theme-colors: (
 	"primary": $primary,
 	"secondary": $secondary,
@@ -52,4 +55,8 @@ body {
 	@include transition(all, 0.2s, ease-in-out);
 	background-color: $light-tertiary;
 	border-radius: 10px;
+}
+
+html {
+	scroll-behavior: smooth;
 }

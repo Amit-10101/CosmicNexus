@@ -1,0 +1,115 @@
+<div class="players d-flex gap-5 w-100 justify-content-between">
+	<!-- Players Left Column -->
+	<div
+		class="players-left-col mt-4 flex-shrink-1 col-8 d-flex flex-column gap-5"
+	>
+		<div>
+			<h2 class="text-primary mb-3">Friends</h2>
+			<div class="d-flex flex-column gap-2">
+				<div
+					class="player-tile"
+					*ngFor="let friend of playersSectionData.friends"
+				>
+					<div class="position-relative">
+						<img
+							[src]="friend.avatar"
+							class="player-image"
+							alt="{{ friend.name + ' Avatar' }}"
+						/>
+						<div [class]="'online-status ' + friend.status"></div>
+					</div>
+					<div class="player-info">
+						<div class="d-flex flex-column justify-content-center">
+							<h4 class="player-name">{{ friend.name }}</h4>
+							<p class="player-status">
+								{{
+									friend.status === "online"
+										? "Online"
+										: "Offline"
+								}}
+							</p>
+						</div>
+						<div class="d-flex gap-2">
+							<button class="btn btn-primary px-4 py-2">
+								<i class="bi bi-chat-left-text-fill"></i> Chat
+							</button>
+							<button class="btn btn-danger px-3 py-2">
+								<i class="bi bi-person-fill-dash"></i> Remove
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<h2 class="text-primary mb-3">Online Players</h2>
+			<div class="d-flex flex-column gap-2">
+				<div
+					class="player-tile"
+					*ngFor="
+						let onlinePlayer of playersSectionData.onlinePlayers
+					"
+				>
+					<div class="position-relative">
+						<img
+							[src]="onlinePlayer.avatar"
+							class="player-image"
+							alt="{{ onlinePlayer.name + ' Avatar' }}"
+						/>
+						<div class="online-status online"></div>
+					</div>
+					<div class="player-info">
+						<div class="d-flex flex-column justify-content-center">
+							<h4 class="player-name">{{ onlinePlayer.name }}</h4>
+							<p class="player-status">Online</p>
+						</div>
+						<button class="btn btn-success text-white px-4 py-2">
+							<i class="bi bi-person-fill-add"></i> Add
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Players Right Column -->
+	<div class="players-right-col mt-4 flex-shrink-1 col-4">
+		<h4 class="text-primary ms-2 mb-4">Friend Requests</h4>
+		<div class="bg-tertiary rounded-4">
+			<div
+				*ngFor="
+					let request of playersSectionData.friendRequests;
+					let last = last
+				"
+			>
+				<div class="request-tile">
+					<img
+						[src]="request.avatar"
+						alt="{{ request.name + ' Avatar' }}"
+						class="request-player-image"
+					/>
+					<div class="request-player-info">
+						<h5 class="request-player-name">{{ request.name }}</h5>
+						<div class="d-flex align-items-center gap-2">
+							<button
+								title="Accept"
+								class="btn btn-success text-white rounded-circle"
+							>
+								<i class="bi bi-person-fill-check"></i>
+							</button>
+							<button
+								title="Reject"
+								class="btn btn-danger rounded-circle w-100 h-100"
+							>
+								<i class="bi bi-person-fill-x"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<hr *ngIf="!last" />
+			</div>
+		</div>
+	</div>
+</div>

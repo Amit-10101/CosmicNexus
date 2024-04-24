@@ -1,0 +1,85 @@
+@import "../../../styles/variables";
+@import "../../../styles/functions";
+
+.player-tile {
+	display: flex;
+	align-items: center;
+	padding: 1.75rem 2.5rem;
+	border-radius: 1rem;
+	width: 100%;
+	background-color: $tertiary;
+
+	.player-image {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+	}
+	.online-status {
+		position: absolute;
+		width: 0.85rem;
+		height: 0.85rem;
+		border-radius: 50%;
+		bottom: 0.1rem;
+		right: 0.1rem;
+	}
+	.online {
+		background-color: $success;
+	}
+	.offline {
+		background-color: $danger;
+	}
+
+	.player-info {
+		width: 100%;
+		margin-left: 1.5rem;
+		color: $font-color;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.player-name {
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+		.player-status {
+			font-size: 1rem;
+			font-weight: 300;
+			display: block;
+			margin: 0;
+		}
+	}
+}
+
+.request-tile {
+	display: flex;
+	align-items: center;
+	padding: 1.75rem 2.5rem;
+	border-radius: 1rem;
+	width: 100%;
+	.request-player-image {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+	}
+	.request-player-info {
+		width: 100%;
+		margin-left: 1.1rem;
+		color: $font-color;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		.request-player-name {
+			font-size: 1.15rem;
+			font-weight: 500;
+			margin: 0;
+		}
+	}
+}
+
+hr {
+	margin: 0 auto;
+	padding: 0;
+	width: 90%;
+	border: 1px solid rgba($color: $font-color, $alpha: 0.35);
+}

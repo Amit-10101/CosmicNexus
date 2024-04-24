@@ -1,0 +1,17 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_functions.scss";
+
+.setting-tile {
+	padding: 2rem 3rem;
+	background-color: $tertiary;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.15rem;
+
+	.big-switch .form-check-input {
+		width: 2.5em;
+		height: 1.2em;
+	}
+}
