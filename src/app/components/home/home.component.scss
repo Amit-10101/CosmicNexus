@@ -7,8 +7,16 @@
 		&:hover {
 			@include transition();
 			transform: scale(1.05);
+			color: $primary !important;
 			box-shadow: 0px 0px 15px 0 rgba(221, 221, 221, 0.447);
 		}
+		// .card-title {
+		// 	@include transition();
+		// 	&:hover {
+		// 		@include transition();
+		// 		color: $primary;
+		// 	}
+		// }
 	}
 }
 
