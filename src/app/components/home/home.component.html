@@ -8,7 +8,7 @@
 				alt="{{ homeSectionData.coverGame.title }}"
 			/>
 			<div
-				class="card-img-overlay col-5 d-flex flex-column gap-2 ps-5 pb-5 justify-content-end"
+				class="card-img-overlay col-5 d-flex flex-column gap-2 ps-5 pb-5 justify-content-end rounded-4"
 				style="
 					background: linear-gradient(
 						to right,
@@ -21,7 +21,7 @@
 					text-shadow: 0 0 5px rgba(169, 169, 169, 0.5);
 				"
 			>
-				<h2 class="card-title">
+				<h2 class="card-title text-white">
 					{{ homeSectionData.coverGame.title }}
 				</h2>
 				<h5 class="card-subtitle">
@@ -79,7 +79,6 @@
 							<i class="bi bi-currency-rupee"></i>
 							{{ game.price }}
 						</p>
-						<!-- <a href="#" class="btn btn-primary">Play Now</a> -->
 					</div>
 				</div>
 			</div>
@@ -117,12 +116,12 @@
 	<div class="right-col col-lg-4 flex-shrink-1 d-flex flex-column gap-3">
 		<!-- Mega Sale -->
 		<div
-			class="p-5 mb-4 rounded-4 text-white bg-light-primary d-flex flex-column gap-3"
+			class="p-5 mb-4 rounded-4 text-white bg-light-primary d-flex flex-column gap-1"
 		>
-			<h2 class="fw-bold">Mega Sale</h2>
+			<h2 class="fw-bold mb-3">Mega Sale</h2>
 			<!-- Row -->
 			<div
-				class="content row py-2 px-0 d-flex align-items-center rounded-3"
+				class="content row py-3 px-1 d-flex align-items-center rounded-3"
 				*ngFor="let item of homeSectionData.megaSaleList"
 			>
 				<div class="col-4">
