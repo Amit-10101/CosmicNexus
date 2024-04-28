@@ -6,7 +6,7 @@
 	align-items: center;
 	padding: 1.75rem 2.5rem;
 	border-radius: 1rem;
-	width: 100%;
+	// width: 100%;
 	background-color: $tertiary;
 
 	.player-image {
@@ -50,6 +50,19 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.player-tile {
+		.player-image {
+			width: 6rem;
+			height: 6rem;
+		}
+		button {
+			font-size: 0.75rem;
+			padding: 5rem;
+		}
+	}
+}
+
 .request-tile {
 	display: flex;
 	align-items: center;
@@ -69,6 +82,7 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
+		gap: 0.5rem;
 		.request-player-name {
 			font-size: 1.15rem;
 			font-weight: 500;

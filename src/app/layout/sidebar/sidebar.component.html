@@ -1,39 +1,75 @@
 <div
-	class="sidebar bg-tertiary h-100 px-2 py-4 d-flex flex-column align-items-center justify-content-between text-font-color"
+	class="sidebar bg-tertiary px-2 py-4 d-flex flex-column align-items-center justify-content-between text-font-color"
 >
 	<img src="assets/logo.png" alt="Logo" class="object-fit-contain w-75" />
 	<div
 		class="sidebar-middle-icons d-flex flex-column align-items-center gap-2"
 	>
-		<a routerLink="/" title="Home" class="active icons">
+		<a
+			routerLink="/"
+			routerLinkActive="active"
+			[routerLinkActiveOptions]="{ exact: true }"
+			title="Home"
+			class="icons"
+		>
 			<i class="bi bi-house-fill"></i>
 		</a>
-		<a routerLink="/library" title="Library" class="icons">
+		<a
+			routerLink="/library"
+			routerLinkActive="active"
+			title="Library"
+			class="icons"
+		>
 			<i class="bi bi-collection"></i>
 		</a>
 		<!-- <div class="icons">
 			<i class="bi bi-controller"></i>
 		</div> -->
-		<a routerLink="/popular" title="Popular" class="icons">
+		<a
+			routerLink="/popular"
+			routerLinkActive="active"
+			title="Popular"
+			class="icons"
+		>
 			<i class="bi bi-graph-up-arrow"></i>
 		</a>
-		<a routerLink="/players" title="Players" class="icons">
+		<a
+			routerLink="/players"
+			routerLinkActive="active"
+			title="Players"
+			class="icons"
+		>
 			<i class="bi bi-people"></i>
 		</a>
-		<a routerLink="/upcoming" title="Upcoming" class="icons">
+		<a
+			routerLink="/upcoming"
+			routerLinkActive="active"
+			title="Upcoming"
+			class="icons"
+		>
 			<i class="bi bi-calendar-event"></i>
 		</a>
 	</div>
 	<div
 		class="sidebar-bottom-icons d-flex flex-column align-items-center gap-2"
 	>
-		<a routerLink="/downloads" title="Downloads" class="icons">
+		<a
+			routerLink="/downloads"
+			routerLinkActive="active"
+			title="Downloads"
+			class="icons"
+		>
 			<i class="bi bi-download"></i>
 		</a>
-		<a routerLink="/settings" title="Settings" class="icons">
+		<a
+			routerLink="/settings"
+			routerLinkActive="active"
+			title="Settings"
+			class="icons"
+		>
 			<i class="bi bi-gear"></i>
 		</a>
-		<div class="icons" title="Logout">
+		<div (click)="logout()" class="icons" title="Logout">
 			<i class="bi bi-box-arrow-left"></i>
 		</div>
 	</div>

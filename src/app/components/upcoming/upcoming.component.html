@@ -1,7 +1,9 @@
-<div class="upcoming d-flex gap-5 mt-5">
+<div class="upcoming d-flex gap-5 mt-5 flex-column flex-md-row">
 	<!-- Left Column -->
 	<div class="upcoming-left-col col-9 flex-shrink-1 d-flex flex-column gap-4">
-		<div class="d-flex justify-content-between align-items-center px-2">
+		<div
+			class="w-100 d-flex justify-content-between flex-column flex-md-row align-items-center px-2"
+		>
 			<h2 class="text-primary">Upcoming Events</h2>
 			<nav aria-label="Calendar navigation">
 				<ul class="pagination pagination-lg m-auto">
@@ -32,10 +34,12 @@
 			</nav>
 		</div>
 
-		<div class="table-responsive rounded-4 px-4 py-4 mb-4 bg-tertiary">
+		<div
+			class="table-responsive overflow-auto rounded-4 px-4 py-4 mb-4 bg-tertiary"
+		>
 			<table class="table">
 				<thead>
-					<tr>
+					<tr class="overflow-auto">
 						<th
 							scope="col"
 							class="text-center border-0 text-primary py-4"
@@ -224,12 +228,16 @@
 	</div>
 
 	<!-- Right Column -->
-	<div class="d-flex flex-column gap-3 col-4 flex-shrink-1">
+	<div
+		class="d-flex flex-column gap-1 gap-md-3 col-12 col-md-4 flex-shrink-1"
+	>
 		<div class="d-flex justify-content-between align-items-center">
 			<h2>Upcoming</h2>
 			<button class="btn btn-primary">View All</button>
 		</div>
-		<div class="rounded-4 bg-tertiary d-flex flex-column pointer p-3">
+		<div
+			class="rounded-4 bg-tertiary d-flex flex-column pointer p-0 p-md-3"
+		>
 			<div
 				class="upcoming-game-tile"
 				*ngFor="let game of upcomingSectionData.games; let last = last"

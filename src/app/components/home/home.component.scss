@@ -16,6 +16,42 @@
 			}
 		}
 	}
+
+	@media (max-width: 767.98px) {
+		.title-sm-small {
+			font-size: 2rem;
+		}
+		.subtitle-sm-small {
+			font-size: 1.15rem;
+		}
+		.text-sm-small {
+			font-size: 0.85rem;
+		}
+		.btn-sm-small {
+			font-size: 0.8rem;
+		}
+	}
+	@media (max-width: 500px) {
+		.title-sm-small {
+			font-size: 1.5rem;
+			margin-bottom: 5px;
+		}
+		.subtitle-sm-small {
+			font-size: 1rem;
+			margin-bottom: 5px;
+		}
+		.text-sm-small {
+			font-size: 0.75rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin-bottom: 5px;
+		}
+		.btn-sm-small {
+			font-size: 0.75rem;
+			padding: 0.25rem 0.5rem;
+		}
+	}
 }
 
 .right-col {

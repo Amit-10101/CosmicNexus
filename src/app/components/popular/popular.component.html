@@ -1,6 +1,8 @@
-<div class="popular w-100 d-flex gap-5 mt-5">
+<div class="popular w-100 d-flex flex-wrap gap-5 mt-5">
 	<!--- Popular First Column --->
-	<div class="popular-first-col col-4 text-primary flex-shrink-1">
+	<div
+		class="popular-first-col col-12 col-md-5 col-lg-3 flex-grow-1 text-primary flex-shrink-1"
+	>
 		<h2 class="mb-3 ms-2">Top Seller</h2>
 		<div class="bg-tertiary rounded-4 w-100 d-flex flex-column">
 			<div
@@ -32,7 +34,9 @@
 	</div>
 
 	<!--- Popular Second Column --->
-	<div class="popular-second-col col-4 text-primary flex-shrink-1">
+	<div
+		class="popular-second-col col-12 col-md-5 col-lg-3 flex-grow-1 text-primary flex-shrink-1"
+	>
 		<h2 class="mb-3 ms-2">Most Played</h2>
 		<div class="bg-tertiary rounded-4 w-100 d-flex flex-column">
 			<div
@@ -61,7 +65,9 @@
 	</div>
 
 	<!--- Popular Third Column --->
-	<div class="popular-third-col col-4 text-primary flex-shrink-1">
+	<div
+		class="popular-third-col col-12 col-md-5 col-lg-3 flex-grow-1 text-primary flex-shrink-1"
+	>
 		<h2 class="mb-3 ms-2">Top Players</h2>
 		<div class="bg-tertiary rounded-4 w-100 d-flex flex-column">
 			<div
@@ -75,7 +81,7 @@
 					<img
 						src="assets/users/{{ player.avatar }}"
 						alt="{{ player.name }} Avatar"
-						class="popular-game-image col-3"
+						class="popular-game-image"
 					/>
 					<div class="d-flex flex-column">
 						<h4>{{ player.name }}</h4>

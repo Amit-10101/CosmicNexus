@@ -31,6 +31,15 @@
 		align-items: center;
 	}
 }
+@media (max-width: 576px) {
+	.popular-game {
+		font-size: 0.75rem;
+	}
+	.popular-game-image {
+		width: 4.5rem;
+		// height: 5rem;
+	}
+}
 
 hr {
 	margin: 0 auto;

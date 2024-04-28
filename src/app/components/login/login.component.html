@@ -1,0 +1,162 @@
+<div class="background-container">
+	<div class="blur">
+		<!-- Login -->
+		<div
+			class="contianer col-8 bg-tertiary p-5 rounded-5 shadow border border-font-color"
+			*ngIf="formMode === 'login'"
+		>
+			<div
+				class="col-6 d-flex justify-content-center align-items-center flex-column gap-5 flex-shrink-1"
+			>
+				<img src="assets/logo.png" alt="Logo" class="logo" />
+				<h1 class="text-primary fw-bolder display-5">CosmicNexus</h1>
+			</div>
+			<div class="col-6 flex-shrink-1 p-2">
+				<h2 class="text-center text-primary fw-semibold display-5 mb-5">
+					Login
+				</h2>
+				<form
+					action=""
+					[formGroup]="loginForm"
+					(ngSubmit)="login_on_submit()"
+					class="d-flex flex-column gap-4"
+				>
+					<div class="form-group">
+						<label for="email" class="form-label">Email</label>
+						<input
+							type="email"
+							formControlName="email"
+							placeholder="Email"
+							class="form-control input-fields"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="password" class="form-label"
+							>Password</label
+						>
+						<input
+							type="password"
+							formControlName="password"
+							placeholder="Password"
+							class="form-control"
+						/>
+					</div>
+					<div class="form-group mt-4">
+						<button
+							type="submit"
+							[disabled]="!loginForm.valid"
+							class="btn btn-primary btn-lg w-100"
+						>
+							Login
+						</button>
+					</div>
+				</form>
+				<h6
+					class="d-flex justify-content-center align-items-center my-2"
+				>
+					New member?
+					<span (click)="toggleFormMode()" class="btn btn-link"
+						>Register</span
+					>
+				</h6>
+			</div>
+		</div>
+
+		<!-- Register -->
+		<div
+			class="contianer col-8 bg-tertiary p-5 py-4 rounded-5 shadow border border-font-color"
+			*ngIf="formMode === 'register'"
+		>
+			<div
+				class="col-6 d-flex justify-content-center align-items-center flex-column gap-5 flex-shrink-1"
+			>
+				<img src="assets/logo.png" alt="Logo" class="logo" />
+				<h1 class="text-primary fw-bolder display-5">CosmicNexus</h1>
+			</div>
+			<div class="col-6 flex-shrink-1 py-2">
+				<h2 class="text-center text-primary fw-semibold display-5 mb-5">
+					Register
+				</h2>
+				<form
+					action=""
+					[formGroup]="registerForm"
+					(ngSubmit)="register_on_submit()"
+					class="d-flex flex-column gap-2"
+				>
+					<div class="d-flex gap-3 w-100">
+						<div class="form-group flex-grow-1">
+							<label for="fname" class="form-label"
+								>First Name</label
+							>
+							<input
+								type="text"
+								formControlName="fname"
+								placeholder="First Name"
+								class="form-control w-100"
+							/>
+						</div>
+						<div class="form-group flex-grow-1">
+							<label for="lname" class="form-label"
+								>Last Name</label
+							>
+							<input
+								type="text"
+								formControlName="lname"
+								placeholder="Last Name"
+								class="form-control w-100"
+							/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="username" class="form-label"
+							>Username</label
+						>
+						<input
+							type="text"
+							formControlName="username"
+							placeholder="Username"
+							class="form-control"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="email" class="form-label">Email</label>
+						<input
+							type="email"
+							formControlName="email"
+							placeholder="Email"
+							class="form-control"
+						/>
+					</div>
+					<div class="form-group">
+						<label for="password" class="form-label"
+							>Password</label
+						>
+						<input
+							type="password"
+							formControlName="password"
+							placeholder="Password"
+							class="form-control"
+						/>
+					</div>
+					<div class="form-group mt-4">
+						<button
+							type="submit"
+							[disabled]="!registerForm.valid"
+							class="btn btn-primary btn-lg w-100"
+						>
+							Register
+						</button>
+					</div>
+				</form>
+				<h6
+					class="d-flex justify-content-center align-items-center my-2"
+				>
+					Already a member?
+					<span (click)="toggleFormMode()" class="btn btn-link"
+						>Login</span
+					>
+				</h6>
+			</div>
+		</div>
+	</div>
+</div>

@@ -21,6 +21,7 @@ $theme-colors: (
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -29,7 +30,8 @@ $theme-colors: (
 }
 
 body {
-	font-family: "Roboto", sans-serif;
+	// font-family: "Roboto", sans-serif;
+	font-family: "Play", sans-serif;
 	width: 100%;
 	color: $font-color;
 }

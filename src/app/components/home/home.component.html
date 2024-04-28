@@ -1,6 +1,6 @@
-<div class="home d-flex gap-lg-5">
+<div class="home d-flex gap-3 gap-lg-5 flex-wrap">
 	<!-- Left Column -->
-	<div class="left-col col-lg-8 flex-grow-1">
+	<div class="left-col col-12 col-lg-8 flex-grow-1 flex-shrink-1">
 		<div class="card text-bg-dark mb-5 rounded-4">
 			<img
 				src="assets/cover/{{ homeSectionData.coverGame.image }}"
@@ -8,7 +8,7 @@
 				alt="{{ homeSectionData.coverGame.title }}"
 			/>
 			<div
-				class="card-img-overlay col-5 d-flex flex-column gap-2 ps-5 pb-5 justify-content-end rounded-4"
+				class="card-img-overlay col-12 col-sm-11 col-md-8 col-lg-5 d-flex flex-column gap-md-2 ps-3 ps-sm-4 ps-lg-5 pb-3 pb-sm-4 pb-lg-5 justify-content-end rounded-4"
 				style="
 					background: linear-gradient(
 						to right,
@@ -21,19 +21,21 @@
 					text-shadow: 0 0 5px rgba(169, 169, 169, 0.5);
 				"
 			>
-				<h2 class="card-title text-white">
+				<h2 class="card-title text-white title-sm-small">
 					{{ homeSectionData.coverGame.title }}
 				</h2>
-				<h5 class="card-subtitle">
+				<h5 class="card-subtitle subtitle-sm-small">
 					{{ homeSectionData.coverGame.subtitle }}
 				</h5>
-				<p class="card-text">
+				<p class="card-text text-sm-small">
 					<small>
 						{{ homeSectionData.coverGame.bodyText }}
 					</small>
 				</p>
 				<a [href]="homeSectionData.coverGame.buttonUrl">
-					<button class="btn btn-primary px-5 text-white">
+					<button
+						class="btn btn-primary px-md-5 text-white btn-sm-small"
+					>
 						Play Free
 					</button>
 				</a>
@@ -42,30 +44,40 @@
 
 		<!-- Category Games -->
 		<div class="d-flex mb-4 flex-column gap-3">
-			<div class="d-flex justify-content-between">
-				<h3>Games Category</h3>
-				<div class="d-flex gap-2">
-					<button class="btn btn-tertiary btn-sm px-4 rounded-5">
+			<div class="d-flex justify-content-between flex-wrap gap-2">
+				<h3 class="mb-3 mb-md-0">Games Category</h3>
+				<div class="d-flex gap-2 flex-wrap">
+					<button
+						class="btn btn-tertiary btn-sm px-3 px-md-4 rounded-5"
+					>
 						Most Popular
 					</button>
-					<button class="btn btn-tertiary btn-sm px-4 rounded-5">
+					<button
+						class="btn btn-tertiary btn-sm px-3 px-md-4 rounded-5"
+					>
 						Action
 					</button>
-					<button class="btn btn-tertiary btn-sm px-4 rounded-5">
+					<button
+						class="btn btn-tertiary btn-sm px-3 px-md-4 rounded-5"
+					>
 						New
 					</button>
-					<button class="btn btn-tertiary btn-sm px-4 rounded-5">
+					<button
+						class="btn btn-tertiary btn-sm px-3 px-md-4 rounded-5"
+					>
 						Free
 					</button>
-					<button class="btn btn-link text-font-color link-offset-2">
+					<button
+						class="btn btn-link btn-sm text-font-color link-offset-2"
+					>
 						View More
 					</button>
 				</div>
 			</div>
-			<div class="d-flex gap-4">
+			<div class="d-flex gap-4 flex-wrap">
 				<!-- Card -->
 				<div
-					class="card col-4 flex-shrink-1 rounded-4 bg-light-primary text-font-color"
+					class="card col-12 col-sm-5 col-md-3 flex-grow-1 flex-shrink-1 rounded-4 bg-light-primary text-font-color"
 					*ngFor="let game of homeSectionData.categoryGames"
 				>
 					<img
@@ -87,10 +99,10 @@
 		<!-- Most Played Games -->
 		<div class="d-flex mb-4 flex-column gap-3">
 			<h3>Most Played Games</h3>
-			<div class="d-flex gap-3">
+			<div class="d-flex gap-3 flex-wrap">
 				<!-- Card -->
 				<div
-					class="card col-4 flex-shrink-1 bg-tertiary rounded-4"
+					class="card col-12 col-sm-5 col-md-3 flex-grow-1 flex-shrink-1 bg-tertiary rounded-4"
 					*ngFor="let game of homeSectionData.mostPlayedGames"
 				>
 					<img
@@ -113,15 +125,17 @@
 	</div>
 
 	<!-- Right Column -->
-	<div class="right-col col-lg-4 flex-shrink-1 d-flex flex-column gap-3">
+	<div
+		class="right-col col-12 col-lg-3 flex-shrink-1 flex-grow-1 d-flex flex-lg-column flex-wrap gap-3"
+	>
 		<!-- Mega Sale -->
 		<div
-			class="p-5 mb-4 rounded-4 text-white bg-light-primary d-flex flex-column gap-1"
+			class="w-100 p-4 p-md-5 mb-4 rounded-4 text-white bg-light-primary d-flex flex-column gap-1"
 		>
 			<h2 class="fw-bold mb-3">Mega Sale</h2>
 			<!-- Row -->
 			<div
-				class="content row py-3 px-1 d-flex align-items-center rounded-3"
+				class="row py-2 py-md-3 px-1 d-flex align-items-center rounded-3"
 				*ngFor="let item of homeSectionData.megaSaleList"
 			>
 				<div class="col-4">
@@ -134,13 +148,16 @@
 				<div
 					class="col-8 d-flex flex-column justify-content-center text-font-color"
 				>
-					<h3 class="fs-6 fw-semibold">{{ item.title }}</h3>
+					<h3 class="fs-6 fw-semibold text-truncate">
+						{{ item.title }}
+					</h3>
 					<div class="d-block">
-						<span class="text-decoration-line-through fw-light"
+						<span
+							class="text-decoration-line-through fw-light small"
 							><i class="bi bi-currency-rupee"></i>
 							{{ item.prevPrice }}</span
 						>
-						<span class="mx-2"
+						<span class="mx-2 small"
 							><i class="bi bi-currency-rupee"></i>
 							{{ item.price }}</span
 						>

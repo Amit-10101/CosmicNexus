@@ -6,8 +6,13 @@ import { UpcomingComponent } from './components/upcoming/upcoming.component';
 import { PlayersComponent } from './components/players/players.component';
 import { PopularComponent } from './components/popular/popular.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
+	{
+		path: 'login',
+		component: LoginComponent,
+	},
 	{
 		path: '',
 		component: HomeComponent,
