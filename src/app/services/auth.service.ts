@@ -21,12 +21,6 @@ export class AuthService {
 	}
 
 	private _isLoggedIn = new BehaviorSubject<boolean>(false);
-	// private _user = {
-	// 	username: '',
-	// 	fname: '',
-	// 	lname: '',
-	// 	email: '',
-	// };
 
 	get isLoggedIn(): Observable<boolean> {
 		return this._isLoggedIn.asObservable();
