@@ -21,6 +21,12 @@ export class AuthService {
 	}
 
 	private _isLoggedIn = new BehaviorSubject<boolean>(false);
+	// private _user = {
+	// 	username: '',
+	// 	fname: '',
+	// 	lname: '',
+	// 	email: '',
+	// };
 
 	get isLoggedIn(): Observable<boolean> {
 		return this._isLoggedIn.asObservable();
@@ -48,6 +54,7 @@ export class AuthService {
 	logout(): void {
 		// Remove token from localStorage when user logs out
 		localStorage.removeItem('token');
+		localStorage.removeItem('username');
 		this._isLoggedIn.next(false);
 	}
 

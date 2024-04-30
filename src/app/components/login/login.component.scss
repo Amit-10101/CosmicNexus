@@ -2,18 +2,20 @@
 @import "../../../styles/functions";
 
 .background-container {
-	background-image: url("../../../assets/bg-cover.jpg");
+	background-image: url("../../../assets/orange-bg-3.jpg");
+	// background-image: url("../../../assets/bg.jpeg");
 	background-size: cover;
-	background-position: center;
+	background-position: top;
 	background-repeat: no-repeat;
 	height: 100vh;
-	width: 100%;
+	// width: 100%;
+	// padding: 2rem 0;
 }
 
 .blur {
-	-webkit-backdrop-filter: blur(2px);
-	backdrop-filter: blur(2px);
-	height: 100vh;
+	// -webkit-backdrop-filter: blur(2px);
+	// backdrop-filter: blur(2px);
+	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;

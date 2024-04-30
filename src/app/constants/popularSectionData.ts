@@ -92,33 +92,33 @@ const popularSectionData: PopularSectionData = {
 	topPlayers: [
 		{
 			id: 1,
-			name: 'John Doe',
+			name: 'Noah',
 			score: '10K',
-			avatar: 'man-placeholder.jpg',
+			avatar: 'assets/users/11.jpg',
 		},
 		{
 			id: 2,
-			name: 'Jane Doe',
+			name: 'Emma',
 			score: '8K',
-			avatar: 'woman-placeholder.webp',
+			avatar: 'assets/users/10.jpg',
 		},
 		{
 			id: 3,
-			name: 'James Doe',
+			name: 'Logan',
 			score: '6K',
-			avatar: 'man-placeholder.jpg',
+			avatar: 'assets/users/12.jpg',
 		},
 		{
 			id: 4,
-			name: 'Alexa',
+			name: 'Olivia',
 			score: '5K',
-			avatar: 'woman-placeholder.webp',
+			avatar: 'assets/users/13.jpg',
 		},
 		{
 			id: 5,
-			name: 'Bella',
+			name: 'Isabella',
 			score: '4K',
-			avatar: 'woman-placeholder.webp',
+			avatar: 'assets/users/14.jpg',
 		},
 	],
 };

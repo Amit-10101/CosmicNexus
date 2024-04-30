@@ -43,3 +43,38 @@ form {
 		background: lighten($color: $light-tertiary, $amount: 7);
 	}
 }
+
+.custom-drop-item {
+	color: $font-color;
+	&:hover {
+		background: lighten($color: $light-tertiary, $amount: 7);
+	}
+}
+
+.custom-drop-item-img {
+	padding: 0.5rem;
+	&:hover {
+		background: $tertiary;
+	}
+}
+
+.custom-drop-item-username {
+	font-size: 1.25rem;
+	color: $font-color;
+	text-align: center;
+	&:hover {
+		background: $tertiary;
+	}
+}
+
+.custom-drop-img {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: top;
+}
+
+.dropdown-menu {
+	box-shadow: 0 0 8px 0 rgba(176, 176, 176, 0.496);
+}

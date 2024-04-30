@@ -13,6 +13,8 @@
 		width: 4rem;
 		height: 4rem;
 		border-radius: 50%;
+		object-fit: cover;
+		object-position: top;
 	}
 	.online-status {
 		position: absolute;
@@ -73,6 +75,8 @@
 		width: 3rem;
 		height: 3rem;
 		border-radius: 50%;
+		object-fit: cover;
+		object-position: top;
 	}
 	.request-player-info {
 		width: 100%;

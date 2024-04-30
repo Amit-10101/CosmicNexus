@@ -26,8 +26,49 @@
 				</span>
 			</i>
 		</div>
-		<div class="icons">
+		<!-- <div class="icons">
 			<i class="bi bi-person-circle"></i>
+		</div> -->
+		<div class="dropdown">
+			<button
+				class="btn btn-secondary icons dropdown-toggle-no-caret"
+				type="button"
+				data-bs-toggle="dropdown"
+				aria-expanded="false"
+				title="Profile"
+			>
+				<i class="bi bi-person-circle text-font-color"></i>
+			</button>
+			<ul class="dropdown-menu bg-tertiary">
+				<li>
+					<button
+						class="dropdown-item custom-drop-item-img d-flex justify-content-center align-items-center"
+						type="button"
+					>
+						<img
+							src="assets/users/1.jpg"
+							class="custom-drop-img"
+							alt="Profile Image"
+						/>
+					</button>
+				</li>
+				<li>
+					<button
+						class="dropdown-item custom-drop-item-username fs-4 fw-bold"
+						type="button"
+					>
+						{{ username }}
+					</button>
+				</li>
+				<li>
+					<button
+						class="dropdown-item custom-drop-item"
+						type="button"
+					>
+						Profile
+					</button>
+				</li>
+			</ul>
 		</div>
 	</div>
 </header>
